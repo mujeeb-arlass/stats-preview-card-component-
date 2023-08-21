@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Stats preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather&family=Montserrat&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Merriweather&family=Montserrat&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              //Primary
+
+              veryDarkBlue: "hsl(233, 47%, 7%)",
+              darkDesaturatedBlue: "hsl(244, 38%, 16%)",
+              softViolet: "hsl(277, 64%, 61%)",
+
+              //Neutral
+
+              White: "hsl(0, 0%, 100%)",
+              SlightlyTransparentWhite: "hsla(0, 0%, 100%, 0.75)",
+              SlightlyTransparentWhite: "hsla(0, 0%, 100%, 0.6)",
+            },
+            fontFamily: {
+              sans: ["Inter", "Lexend Deca"],
+            },
+            screen: {
+              sm: "375px",
+              xl: "1440px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Global container -->
+    <div class="flex items-center justify-center bg-veryDarkBlue min-h-screen">
+      <!-- card -->
+      <div
+        class="text-white rounded-xl mx-6 my-16 pb-8 md:pb-0 md:w-[60rem] text-center bg-darkDesaturatedBlue"
+      >
+        <div class="flex flex-col md:flex-row-reverse">
+          <!-- images -->
+
+          <img
+            src="images/image-mobile.jpg"
+            class="object-fit block md:hidden w-full rounded-t-xl"
+            alt=""
+          />
+
+          <img
+            src="images/image-desktop.jpg"
+            class="hidden md:block md:rounded-r-xl md:w-[30rem]"
+            alt=""
+          />
+
+          <!-- content -->
+          <div
+            class="flex flex-col space-y-10 px-4 pt-10 md:text-left md:p-16"
+          >
+            <!-- title -->
+            <div class="fontFamily-Inter font-bold text-4xl md:text-3xl">
+              Get <span class="text-softViolet">insights</span> that help your
+              business grow.
+            </div>
+
+            <!-- paragraph -->
+
+            <div
+              class="text-lg md:text-lg md:text-left text-SlightlyTransparentWhite"
+            >
+              Discover the benefit of data analytics and make better decision
+              regarding revenue, customer experience, and overall efficiency.
+            </div>
+
+            <!-- items -->
+            <div
+              class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-14 md:pt-4 center"
+            >
+              <!-- item 1 -->
+              <div>
+                <h2 class="font-bold text-3xl">10K+</h2>
+                <p class="pt-2 text-SlightlyTransparentWhite">COMPANIES</p>
+              </div>
+
+              <!-- item 2 -->
+              <div>
+                <h2 class="font-bold text-3xl">314</h2>
+                <p class="pt-2 text-SlightlyTransparentWhite">TEMPLATES</p>
+              </div>
+
+              <!-- item 3 -->
+              <div>
+                <h2 class="font-bold text-3xl">12M+</h2>
+                <p class="pt-2 text-SlightlyTransparentWhite">QUERIES</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
